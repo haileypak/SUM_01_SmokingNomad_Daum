@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
+
 
 
     <LinearLayout
@@ -15,17 +17,43 @@
         android:layout_weight="1">
 
         <LinearLayout
-            android:id="@+id/search_bar"
-            android:orientation="vertical"
+            android:id="@+id/menu_bar"
             android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:src="@drawable/menu"
+                android:background="#00000000"
+                android:adjustViewBounds="true"
+                android:scaleType="center"
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="10dp">
 
             <EditText
                 android:id="@+id/editSearch"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="검색어를 입력하세요."/>
+                android:layout_height="40dp"
+                android:cursorVisible="false"
+                android:hint="검색어를 입력하세요."
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="17dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:background="@drawable/border"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -43,7 +71,6 @@
 
         </fragment>
     </LinearLayout >
-
 
 
 </LinearLayout >
